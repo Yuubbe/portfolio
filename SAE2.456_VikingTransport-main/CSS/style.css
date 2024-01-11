@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+} 
+
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  margin: 0px;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  margin: 1em;
+  border-radius: 5px;
+  border: solid 1px #333;
+}
+
+a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #212121;
+  padding: 8px;
+}
+
+/* Style des trajets */
+div * {
+  margin: 1em;
+}
+
+div a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #333;
+}
+
+div a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+select {
+  height: 30vh;
+}
+
+select option {
+  margin: 0;
+  padding: 1em;
+  border: solid black 1px;
+}
+
+/* Style des formulaires */
+input[type="text"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.paiementForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+
+.paiementForm * {
+  margin: 1em;
+}
+
+.paiementForm input::-webkit-outer-spin-button,
+.paiementForm input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.paiementForm input[type=number] {
+  -moz-appearance: textfield;
+}
