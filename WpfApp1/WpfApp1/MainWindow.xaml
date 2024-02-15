@@ -1,0 +1,20 @@
+﻿<Window x:Class="GenshinMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menu Principal" Height="500" Width="800">
+    <Grid>
+        <Image Source="C:\Users\gambvin\Downloads\qi31bxaehwo71.jpg" Stretch="UniformToFill"/>
+        <Border BorderThickness="0"  CornerRadius="15"  Margin="50">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20">
+                <TextBlock Text="Menu Principal" FontSize="36" FontWeight="Bold" Margin="0 0 20 30" HorizontalAlignment="Center" Foreground="#FF0752B7"/>
+                <Button Content="Nouvelle Partie"  Margin="0 0 0 10"/>
+                <Button Content="Charger Partie"  Margin="0 0 0 10"/>
+                <Button Content="Options"  Margin="0 0 0 10"/>
+                <Button Content="Quitter"  Margin="0 0 0 10"/>
+                <StackPanel Orientation="Horizontal">
+                <Button Content="Lecture/Pause" Width="292"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
