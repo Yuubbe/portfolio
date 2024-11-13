@@ -35,8 +35,12 @@
         <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Mes projets</span></a>        
       </li>
       <li class="navbar__item">
-        <a href="/login" class="navbar__link"><i data-feather="settings"></i><span>[Mon compte]</span></a>        
-      </li>
+  {% if app.user %}
+    <a href="/deconnexion" class="navbar__link"><i data-feather="log-out"></i><span>Se déconnecter</span></a>
+  {% else %}
+    <a href="{{ path('app_login') }}" class="navbar__link"><i data-feather="log-in"></i><span>Se connecter</span></a>
+  {% endif %}
+</li>
     </ul>
   </nav>
 </div>
