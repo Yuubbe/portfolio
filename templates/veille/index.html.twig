@@ -1,0 +1,49 @@
+{% extends '/index/index.html.twig' %}
+
+{% block title %}Hello MentionController!{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/presentation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bouton.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+
+<div class="header">  
+  <div class="header__logo">
+    <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo">
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="/" class="navbar__link"><i data-feather="home"></i><span>Accueil</span> </a>
+      </li>
+      <li class="navbar__item">
+        <a href="/presentation" class="navbar__link"><i data-feather="message-square"></i><span>Présentation</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/certification" class="navbar__link"><i data-feather="users"></i><span>Certifications</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/competence" class="navbar__link"><i data-feather="folder"></i><span>Compétences</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/veille" class="navbar__link"><i data-feather="archive"></i><span>Veille technologique</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="help-circle"></i><span>Mes projets</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="settings"></i><span>[Mon compte]</span></a>        
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}

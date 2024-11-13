@@ -1,0 +1,190 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bienvenue sur mon portfolio{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<main class="site-wrapper">
+  <div class="pt-table desktop-768">
+    <div class="pt-tablecell page-home relative" style="background-image: url();
+    background-position: center;
+    background-size: cover;">
+                    <div class="overlay"></div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                                <div class="page-title  home text-center">
+                                  <span class="heading-page"> Bienvenue sur mon portfolio</span>
+                                </div>
+
+                                <div class="hexagon-menu clear">
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="/presentation" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-universal-access"></i>
+                                                </span>
+                                                <span class="title">Présentation</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="/mention" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-bullseye"></i>
+                                                </span>
+                                                <span class="title">Mentions légales</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="/veille" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-braille"></i>
+                                                </span>
+                                                <span class="title">Veille technologique</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>    
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-id-badge"></i>
+                                                </span>
+                                                <span class="title">Se connecter</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a  href="/projet" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-life-ring"></i>
+                                                </span>
+                                                <span class="title">Mes projets</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="/competence" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-clipboard"></i>
+                                                </span>
+                                                <span class="title">Compétences</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="/certification" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa fa-map-signs"></i>
+                                                </span>
+                                                <span class="title">Certifications</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </main>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+{% endblock %}

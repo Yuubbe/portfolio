@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PresentationController!{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/presentation.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bouton.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+{% endblock %}
+
+{% block body %}
+
+<div class="header">  
+  <div class="header__logo">
+    <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo">
+  </div>
+  <nav class="navbar">
+    <ul class="navbar__menu">
+      <li class="navbar__item">
+        <a href="/" class="navbar__link"><i data-feather="home"></i><span>Accueil</span> </a>
+      </li>
+      <li class="navbar__item">
+        <a href="/projet" class="navbar__link"><i data-feather="message-square"></i><span>Mes projets</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/certification" class="navbar__link"><i data-feather="users"></i><span>Certifications</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/competence" class="navbar__link"><i data-feather="folder"></i><span>Compétences</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/veille" class="navbar__link"><i data-feather="archive"></i><span>Veille technologique</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="/mention" class="navbar__link"><i data-feather="help-circle"></i><span>Mentions légales</span></a>        
+      </li>
+      <li class="navbar__item">
+        <a href="#" class="navbar__link"><i data-feather="settings"></i><span>[Mon compte]</span></a>        
+      </li>
+    </ul>
+  </nav>
+  
+  
+</div>
+<br><br>
+<div class="image-container">
+  <img src="{{ asset('img/homme.png') }}" alt="Image d'un homme">
+</div>
+<p align="center">Je suis Vincent Gamblin, actuellement étudiant en deuxième année d'un brevet de <br>
+			technicien supérieur SIO (Services Informatique aux Organisations) au sein de l'établissement<br>
+			Notre Dame de la Providence.</p>
+			<br>
+			<p align="center">Âgé de 20 ans et obtenu un baccalauréat en sciences et technologies de l'industrie et du développement durable (STI2D),<br>
+			dans l'établissement alexis de Tocqueville situé à Cherbourg-en-Cotentin;
+			<br>
+			j'ai décidé de poursuivre mes études vers un brevet de technicien supérieur afin d'acquérir de nouvelles compétences et d'en developper.</p>
+      <a href="https://www.canva.com/design/DAGWG-zVEHk/0VwIss8MVpe3QaT_p245qg/view?utm_content=DAGWG-zVEHk&utm_campaign=designshare&utm_medium=link&utm_source=editor" target="_blank"><button class="comic-button" align="center">visualiser mon CV</button></a>
+      <a href="{{ asset('files/CV Gamblin_Vincent 2024_portfolio.pdf') }}" target="_blank"><button class="comic-button" align="center">télécharger mon CV</button></a>
+      
+
+
+
+
+
+  
+
+
+
+
+
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src='https://unpkg.com/feather-icons'></script>
+    
+{% endblock %}
