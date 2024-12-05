@@ -1,15 +1,77 @@
 {% extends '/index/index.html.twig' %}
 
-{% block title %}Hello MentionController!{% endblock %}
+{% block title %}Certifications en cours{% endblock %}
 
 {% block stylesheets %}
     <link rel="stylesheet" href="{{ asset('css/presentation.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bouton.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .certifications-section {
+            padding: 2rem;
+            background: linear-gradient(90deg, #f3f4f6, #e5e7eb);
+            border-radius: 10px;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .certifications-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .certifications-header h1 {
+            font-size: 2.5rem;
+            color: #374151;
+        }
+        .certifications-header p {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .certification-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .certification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .certification-card img {
+            width: 60px;
+            margin-bottom: 1rem;
+        }
+        .certification-card h2 {
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        .certification-card p {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        .certification-card a {
+            display: block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #3b82f6;
+            font-weight: bold;
+        }
+        .certification-card a:hover {
+            color: #2563eb;
+        }
+    </style>
 {% endblock %}
 
 {% block body %}
-
 <div class="header">  
   <div class="header__logo">
     <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo">
@@ -33,20 +95,78 @@
       </li>
       <li class="navbar__item">
         <a href="/projet" class="navbar__link"><i data-feather="help-circle"></i><span>Mes projets</span></a>        
+      </li>
       <li class="navbar__item">
-  {% if app.user %}
-    <a href="/deconnexion" class="navbar__link"><i data-feather="log-out"></i><span>Se déconnecter</span></a>
-  {% else %}
-    <a href="" class="navbar__link"><i data-feather="log-in"></i><span>Se connecter</span></a>
-  {% endif %}
-</li>
+        {% if app.user %}
+          <a href="/deconnexion" class="navbar__link"><i data-feather="log-out"></i><span>Se déconnecter</span></a>
+        {% else %}
+          <a href="" class="navbar__link"><i data-feather="log-in"></i><span>Se connecter</span></a>
+        {% endif %}
+      </li>
     </ul>
   </nav>
 </div>
 
-
+<div class="certifications-section">
+    <div class="certifications-header">
+        <h1>Certifications en cours</h1>
+        <p>Voici les certifications actuellement en préparation pour enrichir mes compétences.</p>
+    </div>
+    <div class="certifications-grid">
+        <div class="certification-card">
+            <img src="{{ asset('img/tryhackme.png') }}" alt="TryHackMe">
+            <h2>TryHackMe</h2>
+            <p>Cybersécurité pratique et analyse.</p>
+            <a href="https://tryhackme.com/" target="_blank">Voir la certification</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/ruby.png') }}" alt="Ruby">
+            <h2>Ruby</h2>
+            <p>Langage de programmation orienté objet.</p>
+            <a href="https://www.codecademy.com/learn/learn-ruby" target="_blank">Voir la formation gratuite</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/javascript.png') }}" alt="JavaScript">
+            <h2>JavaScript</h2>
+            <p>Script côté client pour le web.</p>
+            <a href="https://www.freecodecamp.org/learn" target="_blank">Voir la formation gratuite</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/cisco.png') }}" alt="Cisco">
+            <h2>Cisco</h2>
+            <p>Réseaux informatiques et systèmes.</p>
+            <a href="https://skillsforall.com/" target="_blank">Voir la formation gratuite</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/php.png') }}" alt="PHP">
+            <h2>PHP</h2>
+            <p>Développement web backend.</p>
+            <a href="https://www.codecademy.com/learn/learn-php" target="_blank">Voir la formation gratuite</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/symfony.png') }}" alt="Symfony">
+            <h2>Symfony</h2>
+            <p>Framework PHP pour applications web.</p>
+            <a href="https://symfonycasts.com/" target="_blank">Voir la formation gratuite</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/rust.png') }}" alt="Rust">
+            <h2>Rust</h2>
+            <p>Langage moderne, rapide et sûr.</p>
+            <a href="https://www.rust-lang.org/learn" target="_blank">Voir la formation gratuite</a>
+        </div>
+        <div class="certification-card">
+            <img src="{{ asset('img/sql.png') }}" alt="SQL">
+            <h2>SQL</h2>
+            <p>Gestion des bases de données relationnelles.</p>
+            <a href="https://www.sqlcourse.com/" target="_blank">Voir la formation gratuite</a>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block javascripts %}
-
+    <script>
+        feather.replace(); // Pour les icônes
+    </script>
 {% endblock %}
