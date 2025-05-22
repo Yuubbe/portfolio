@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/bouton.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Section Veille */
+        /* Veille */
         .rss-articles {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -56,7 +56,7 @@
             color: #777;
         }
 
-        /* Section Projets */
+        /* Projets */
         .project-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -116,31 +116,18 @@
 {% endblock %}
 
 {% block body %}
-
 <div class="header">  
     <div class="header__logo">
         <img src="{{ asset('img/logo.png') }}" alt="Logo" class="logo">
     </div>
     <nav class="navbar">
         <ul class="navbar__menu">
-            <li class="navbar__item">
-                <a href="/" class="navbar__link"><i data-feather="home"></i><span>Accueil</span></a>
-            </li>
-            <li class="navbar__item">
-                <a href="/presentation" class="navbar__link"><i data-feather="message-square"></i><span>Présentation</span></a>
-            </li>
-            <li class="navbar__item">
-                <a href="/certification" class="navbar__link"><i data-feather="users"></i><span>Certifications</span></a>
-            </li>
-            <li class="navbar__item">
-                <a href="/competence" class="navbar__link"><i data-feather="folder"></i><span>Compétences</span></a>
-            </li>
-            <li class="navbar__item">
-                <a href="/veille" class="navbar__link"><i data-feather="archive"></i><span>Veille technologique</span></a>
-            </li>
-            <li class="navbar__item">
-                <a href="#projects" class="navbar__link"><i data-feather="help-circle"></i><span>Mes projets</span></a>
-            </li>
+            <li class="navbar__item"><a href="/" class="navbar__link"><i data-feather="home"></i><span>Accueil</span></a></li>
+            <li class="navbar__item"><a href="/presentation" class="navbar__link"><i data-feather="message-square"></i><span>Présentation</span></a></li>
+            <li class="navbar__item"><a href="/certification" class="navbar__link"><i data-feather="users"></i><span>Certifications</span></a></li>
+            <li class="navbar__item"><a href="/competence" class="navbar__link"><i data-feather="folder"></i><span>Compétences</span></a></li>
+            <li class="navbar__item"><a href="/veille" class="navbar__link"><i data-feather="archive"></i><span>Veille technologique</span></a></li>
+            <li class="navbar__item"><a href="#projects" class="navbar__link"><i data-feather="help-circle"></i><span>Mes projets</span></a></li>
             <li class="navbar__item">
                 {% if app.user %}
                     <a href="/deconnexion" class="navbar__link"><i data-feather="log-out"></i><span>Se déconnecter</span></a>
@@ -153,40 +140,58 @@
 </div>
 
 <h1 id="projects">Mes projets</h1>
-    <div class="project-list">
-        <div class="project-card">
-            <img src="{{ asset('img/logo.webp') }}" alt="Stage-Direct">
-            <div class="project-content">
-                <h2 class="project-title">Stage-Direct</h2>
-                <p class="project-description">
-                    Une plateforme dédiée à la gestion des stages, permettant aux entreprises et étudiants de gérer offres, candidatures et suivis de manière intuitive.
-                </p>
-                <a href="https://github.com/Yuubbe/stage-direct" target="_blank" class="project-link">Voir sur GitHub</a>
+<div class="project-list">
+    <div class="project-card">
+        <img src="{{ asset('img/logo.webp') }}" alt="Stage-Direct">
+        <div class="project-content">
+            <h2 class="project-title">Stage-Direct</h2>
+            <p class="project-description">Une plateforme dédiée à la gestion des stages...</p>
+            <a href="https://github.com/Yuubbe/stage-direct" target="_blank" class="project-link">Voir sur GitHub</a>
+            <div style="margin-top: 10px;">
+                <a href="https://drive.google.com/file/d/1535XrZGahywwMCdvWiHT7OUwq3aEuw1_/view?usp=drive_link" target="_blank" class="project-link" style="background-color: #28a745;">Doc utilisateur</a>
+                <a href="https://drive.google.com/file/d/1zPS0BujAQ3HBRPM6MmeyvP0JrcVu8TZK/view?usp=drive_link" target="_blank" class="project-link" style="background-color: #17a2b8;">Doc technique</a>
+                <a href="https://stage-direct.gamblin-vincent.ovh/" target="_blank" class="project-link" style="background-color: #6f42c1;">Démo</a>
             </div>
         </div>
-        <div class="project-card">
-            <img src="{{ asset('img/atedi.webp') }}" alt="Atedi">
-            <div class="project-content">
-                <h2 class="project-title">Atedi</h2>
-                <p class="project-description">
-                    Une API conçu pour communiquer, avec dolibarr, pour créer des factures et bien d'autres fonctionalités.
-                </p>
-                <a href="https://github.com/Yuubbe/Atedi.2024" target="_blank" class="project-link">Voir sur GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <img src="{{ asset('img/atedi.webp') }}" alt="Atedi">
+        <div class="project-content">
+            <h2 class="project-title">Atedi</h2>
+            <p class="project-description">Une API conçue pour communiquer avec Dolibarr...</p>
+            <a href="https://github.com/Yuubbe/Atedi.2024" target="_blank" class="project-link">Voir sur GitHub</a>
+            <div style="margin-top: 10px;">
+                <a href="https://drive.google.com/file/d/1Dmnl-iMjb7uP4nk0pXGn420yCw_ti24O/view?usp=drive_link" target="_blank" class="project-link" style="background-color: #28a745;">Doc utilisateur</a>
+                <a href="https://drive.google.com/file/d/1Iyaseynjhkb_QlUkK4VZ6EtEQMDdLiAo/view?usp=drive_link" target="_blank" class="project-link" style="background-color: #17a2b8;">Doc technique</a>
             </div>
         </div>
-        <div class="project-card">
-            <img src="{{ asset('img/Dolibarr_logo.jpg') }}" alt="Dolibarr">
-            <div class="project-content">
-                <h2 class="project-title">Dolibarr</h2>
-                <p class="project-description">
-                    Un module personnalisé pour Dolibarr, conçu pour optimiser les processus internes d'Atedi avec des outils avancés.
-                </p>
-                <a href="https://github.com/Yuubbe/dolibarr_projet" target="_blank" class="project-link">Voir sur GitHub</a>
+    </div>
+
+    <div class="project-card">
+        <img src="{{ asset('img/Dolibarr_logo.jpg') }}" alt="Dolibarr">
+        <div class="project-content">
+            <h2 class="project-title">Dolibarr</h2>
+            <p class="project-description">Un module personnalisé pour Dolibarr, conçu pour optimiser les processus internes...</p>
+            <a href="https://github.com/Yuubbe/dolibarr_projet" target="_blank" class="project-link">Voir sur GitHub</a>
+            <div style="margin-top: 10px;">
+                <a href="https://drive.google.com/file/d/19AKuM9cvVj7qOSFRwjxU92Qij-Gqri-B/view?usp=sharing" target="_blank" class="project-link" style="background-color: #28a745;">Doc utilisateur</a>
+                <a href="https://drive.google.com/file/d/1O46sqQxsAX0vTym0imTdOybQ3EMvpvBN/view?usp=drive_link" target="_blank" class="project-link" style="background-color: #17a2b8;">Doc technique</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-content">
+            <h2 class="project-title">R.E.I</h2>
+            <p class="project-description">Un registre d'accès, d'impression et d'emprunt pour la base navale de Cherbourg.</p>
+            <a href="https://github.com/Yuubbe/R.E.I" target="_blank" class="project-link">Voir sur GitHub</a>
+            <div style="margin-top: 10px;">
+                <a href="https://drive.google.com/file/d/1xLGQDZw67X5MN7OVF3A5QYhj5lhk74-A/view?usp=drive_link" target="_blank" class="project-link" style="background-color: #28a745;">Documentations</a>
             </div>
         </div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block javascripts %}
